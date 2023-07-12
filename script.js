@@ -48,6 +48,13 @@ const quiz = [
     ],
   },
   {
+    question: "Choose a breakfast beverage:",
+    options: [
+      { text: "Mimosa", points: 1 },
+      { text: "Coffee", points: 0 },
+    ],
+  },
+  {
     question: "Are you big fan of Tom Cruise?",
     options: [
       { text: "Love that guy", points: 0 },

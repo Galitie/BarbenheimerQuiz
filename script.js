@@ -13,9 +13,9 @@ const quiz = [
   {
     question: "Did you have a barbie growing up?",
     options: [
-      { text: "Of course!", points: 1 },
+      { text: "Yes", points: 1 },
       { text: "No...but I wanted one", points: 1 },
-      { text: "No, or I didn't like Barbies", points: 0 },
+      { text: "No, or I don't like Barbies", points: 0 },
     ],
   },
   {
@@ -38,6 +38,13 @@ const quiz = [
       { text: "Yes", points: 0 },
       { text: "Kinda", points: 0 },
       { text: "Not really", points: 1 },
+    ],
+  },
+  {
+    question: "You're going out to eat, you can only do one:",
+    options: [
+      { text: "Appetizer and Main Course", points: 1 },
+      { text: "Main Course and Dessert", points: 0 },
     ],
   },
   {
@@ -93,25 +100,32 @@ function displayResult() {
   const resultContainer = document.getElementById("result");
   const questionContainer = document.getElementById("question");
   const optionsContainer = document.getElementById("options");
+  const descriptionContainer = document.getElementById("description");
 
   if (barbiePoints > oppenheimerPoints) {
-    resultContainer.style.color = "pink";
+    resultContainer.style.color = "hotpink";
     questionContainer.innerText = "";
     optionsContainer.innerText = "";
     resultContainer.innerText =
       "Team Barbenheimer! See Barbie first, then Oppenheimer.";
+    descriptionContainer.innerText =
+      "You wanna sit with the angst and not let Barbie wash it away.";
   } else if (oppenheimerPoints > barbiePoints) {
     resultContainer.style.color = "brown";
     questionContainer.innerText = "";
     optionsContainer.innerText = "";
     resultContainer.innerText =
       "Team Oppenbarbie! See Oppenheimer first, then Barbie.";
+    descriptionContainer.innerText =
+      "You probably wanna walk out of the theaters feeling good and light!";
   } else {
     resultContainer.style.color = "red";
     questionContainer.innerText = "";
     optionsContainer.innerText = "";
     resultContainer.innerText =
       "Inconclusive, you are chaos incarnate, do whatever you want man.";
+    descriptionContainer.innerText =
+      "Whatever you choose, you're gonna have a good experience.";
   }
 }
 

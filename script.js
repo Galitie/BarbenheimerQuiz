@@ -130,9 +130,9 @@ function displayResult() {
     questionContainer.innerText = "";
     optionsContainer.innerText = "";
     resultContainer.innerText =
-      "Inconclusive, you are chaos incarnate, do whatever you want man.";
+      "You got a tie, you are chaos incarnate, do what you want man.";
     descriptionContainer.innerText =
-      "Whatever you choose, you're gonna have a good experience.";
+      "Whatever you choose, you're gonna have a good experience. You're just that flexible.";
   }
 }
 
